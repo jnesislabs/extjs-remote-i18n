@@ -1,0 +1,7 @@
+{
+	"button": "Mon Bouton",
+    "title": "Mon titre !",
+    "locale": {
+        "toto": "tutu FR"
+    }
+}

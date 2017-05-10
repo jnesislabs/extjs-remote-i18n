@@ -1,0 +1,43 @@
+{
+    "name": "jnesis-i18n",
+    "namespace": "Jnesis.i18n",
+    "type": "code",
+    "toolkit": "${args.toolkit}",
+    "creator": "Jnesis",
+    "summary": "Remote internationalization",
+    "detailedDescription": "The purpose of this package is to let developers easily import internationalization files (json or js) before the application launches. They can then translate titles, labels etc... via the localized { xxx : '{yyy}'} config",
+    "version": "1.0.0",
+    "compatVersion": "1.0.0",
+    "format": "1",
+    "slicer": {
+        "js": [
+            {
+                "path": "${package.dir}/sass/example/custom.js",
+                "isWidgetManifest": true
+            }
+        ]
+    },
+    "output": "${package.dir}/build",
+    "resources": [
+        {
+            "path": "${package.dir}/resources",
+            "output": "shared"
+        }
+    ],
+    "local": true,
+    "sass": {
+        "namespace": "Jnesis.i18n",
+        "etc": "${package.dir}/sass/etc/all.scss,${package.dir}/${toolkit.name}/sass/etc/all.scss",
+        "var": "${package.dir}/sass/var,${package.dir}/${toolkit.name}/sass/var",
+        "src": "${package.dir}/sass/src,${package.dir}/${toolkit.name}/sass/src"
+    },
+    "classpath": "${package.dir}/src,${package.dir}/${toolkit.name}/src",
+    "overrides": "${package.dir}/overrides,${package.dir}/${toolkit.name}/overrides",
+
+    "example": {
+        "path": [
+            "${package.dir}/examples"
+        ]
+    },
+    "requires": []
+}
